@@ -14,8 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('nasabahs', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->integer('No_Rekening')->primary();
+            $table->string('Nama',50)->nullable();
+            $table->string('Alamat',50)->nullable();
+            $table->string('Jenis_Tabungan',20)->nullable();
+            $table->integer('Saldo')->nullable();
         });
     }
 
